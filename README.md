@@ -19,7 +19,7 @@ python3 main.py [<player_name> [<map_name>]]
 ```
 player_name: without spaces
 
-current maps name: classic, edited
+current maps name: classic, edited, cool
 
 ## __Game logic__
 ## Ghost behavior
@@ -55,7 +55,7 @@ Objects:
 - Animation class (drawer and commander)
 
 
-### __Current__
+### __Past__
 Patterns:
 - Creational:
     - Builder for Ghosts: one class to build Ghost based on its type
@@ -70,17 +70,23 @@ Patterns:
 UML-scheme:
 ![uml_pacman_cur](https://user-images.githubusercontent.com/39986899/162732776-848ba388-86bf-46c1-8ac0-73b9eafc2c21.png)
 
-### __Thoughts__
 
-Patterns (additions):
+### __Current__
+Patterns:
 - Creational:
-    + Builder for maps
+    - Builder for Ghosts: one class to build Ghost based on its type
+    - Builder for Tiles: one class to build ground Tiles based on its type
+    - Builder for maps.
 -  Structural:
-    + Interfaces between Animation class and MovingObjects
-    + Interfaces for Input, Timer
-    + Union of Ghosts names (forgotten on diagram: must be as game states)
+    - Facade for Anim: animation provides interaction between Spirit, Player and Tiles (so all objects in the game)
+    - Interfaces for Input, Timer
+    - Complete constants classes (unions, enums)
 - Behavioral:
-    - Unify behavior of Ghosts and Player by abstract class MovingObject 
+    - State for animation which depends on game state
+    - Unified behavior of Ghosts and Player
+- Software Design:
+  - Model–view–controller which provides by pygame's functions (more precise described in my previous project, where u have that all functions implementations by classes: keyboard, input, render, anim)
 
-UML-scheme (final):
-![uml_pacman_final](https://user-images.githubusercontent.com/39986899/162732819-726c6a15-c7af-4db9-9977-62f628035da7.png)
+Done structure modeling and division into modules and areas of responsibility.
+
+![uml_pacman_pass2](https://user-images.githubusercontent.com/39986899/168724887-a6716a3d-ccb1-4d6b-b0b1-9ec8e3a6f2b9.png)
