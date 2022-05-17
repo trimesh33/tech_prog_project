@@ -1,5 +1,3 @@
-I guess done 1 and 2.
-
 My project was some DnD game (description bellow).
 I'd love to do it, but time...
 
