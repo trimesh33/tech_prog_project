@@ -4,7 +4,7 @@ from game.anim import Anim
 def main():
   args = sys.argv[1:]
   player_name = ''
-  maps_name = ['classic', 'edited']
+  maps_name = ['classic', 'edited', 'cool']
   map_name = maps_name[0]
   try:
     player_name = args[0]
