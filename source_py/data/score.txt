@@ -1,0 +1,3 @@
+trimesh 30000
+mr_dark_tesla 62
+1 22
